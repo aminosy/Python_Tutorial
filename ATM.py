@@ -52,3 +52,4 @@ def atm_sys():
             print('已退出')
             break
 
+atm_sys()
