@@ -1,0 +1,54 @@
+##list列表的常用操作
+my_list = ["Tom" , "Jack" , "Rose"]
+
+#1.1 查找某元素在列表中的下标索引[使用list.index]
+print(my_list.index('Jack'))
+
+#1.2 如果被查找的元素不存在，会报错
+#print(my_list.index('Jude'))
+
+#2. 修改特定下标索引的值
+my_list[0] = 114
+my_list[-2] = 514
+print(my_list)
+
+#3. 在指定下标位置插入新元素[使用list.insert]
+my_list.insert(2,1919810)
+print(my_list)
+
+#4. 在列表的尾部追加''单个''新元素[使用list.append]
+my_list.append('先辈')
+print(my_list)
+
+#5. 在列表的尾部追加''一批''新元素[使用list.extend]
+my_list2 = [ 1 , 2 , 3 ]
+my_list.extend(my_list2)
+print(my_list)
+
+#6. 删除制定下标索引的元素（两种方式）[使用del list[下标]或list.pop[下标]]
+
+#6.1 使用del list[下标](仅删除)
+del my_list[-1]
+print(my_list)
+
+#6.2 使用list.pop(下标)(.pop本质是把指定元素取出并返回)
+element = my_list.pop(-1)
+print(my_list)
+print(f'取出的元素为{element}')
+
+#7. 删除某元素在列表中的第一个匹配项[使用list.remove(元素)]
+my_list.remove(1)
+print(my_list)
+
+#8. 清空列表[使用list.clear()]
+my_list2.clear()
+if my_list2 == []:
+    print('clear already')
+
+#9. 统计列表内某元素的数量[使用list.count(元素)]
+count = my_list.count(114)
+print(count)
+
+#10. 统计列表里面一共有多少元素[使用len(list)]
+length = len(my_list)
+print(length)
