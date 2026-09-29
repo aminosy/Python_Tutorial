@@ -1,0 +1,52 @@
+"""
+演示tuple元组的定义和操作
+"""
+
+#定义元组
+t1 = (1, "Hello", True)
+t2 = ()
+t3 = tuple()
+print(f'the type of t1 is {type(t1)},the content is {t1}')
+print(f'the type of t2 is {type(t2)},the content is {t2}')
+print(f'the type of t3 is {type(t3)},the content is {t3}')
+
+#定义单个元素的元组
+t4 = ('hello',)
+print(f'the type of t4 is {type(t4)},the content is {t4}')
+
+#元组的嵌套
+t5 = ((1,2,3),(4,5,6))
+print(f'the type of t5 is {type(t5)},the content is {t5}')
+
+#下表索引取出内容
+num = t5[1][2]
+print(f'one of the content of t5 is {num}')
+
+#元组中的方法{index(), count(), len()}
+#index查找方法
+t6 = (114, 514, 1919810)
+index = t6.index(114)
+print(f'the position of 114 in the tuple6 is {index}')
+
+#count统计方法
+t7 = ('一个','一个','一个','一个','eaaaaa')
+num = t7.count('一个')
+print(f'the number of "一个" is {num}')
+
+#len函数统计元组元素数量
+t8 = ('一个','一个','一个','一个','eaaaaa')
+length = len(t8)
+print(f'the length of t8 is {length}')
+
+
+#元组的遍历
+#while遍历
+index = 0
+while index < len(t8):
+    print(f'元组的元素有{t8[index]}')
+    #至关重要
+    index += 1
+
+#for遍历
+for element in t8:
+    print(f'yaunzudeyuansuyou{element}')
