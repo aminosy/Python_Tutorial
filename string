@@ -1,0 +1,44 @@
+"""
+演示以数据容器的角色，学习字符串的相关操作
+"""
+
+my_str = '1145141919810'
+
+#通过下表索引取值
+value = my_str[2]
+value2 = my_str[-2]
+print(value,value2)
+
+#index方法
+value = my_str.index('514')
+print(f'the position of 514 is {value}')
+
+#replace方法
+new_my_str = my_str.replace('19','一个')
+print(new_my_str)
+
+#split方法
+my_str = '114 514 1919 810'
+my_str_list = my_str.split(' ')
+print(my_str_list)
+
+#strip方法【字符串的规整操作】（去前后空格）
+#语法：字符串.strip（）
+my_str = '  1145141919810  '
+new_my_str = my_str.strip()#不传入参数，去除首尾空格
+print(f'{my_str}被strip后结果为{new_my_str}')
+
+#语法：字符串.strip('参数')
+my_str = '23114514191981032'
+new_my_str = my_str.strip('23')#传入参数，从首尾删掉参数内容
+print(f'{my_str}被strip后结果为{new_my_str}')
+
+#统计字符串中某字符(串）出现次数，.count方法
+my_str = '1145141919810'
+count1 = my_str.count('1')
+count2 = my_str.count('19')
+print(count1,count2)
+
+#统计字符串长度，len函数
+num = len(my_str)
+print(num)
